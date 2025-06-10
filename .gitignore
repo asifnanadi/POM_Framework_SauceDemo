@@ -1,0 +1,31 @@
+# Java + Maven
+/target/
+*.class
+
+# IDEs
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+# Logs, Reports, Test Output
+logs/
+reports/
+test-output/
+*.log
+
+# OS & temp
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+
+# Selenium screenshots or recordings
+screenshots/
+recordings/
+
+# Sensitive data
+.env
+*.keystore
