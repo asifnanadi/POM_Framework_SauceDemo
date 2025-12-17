@@ -1,12 +1,8 @@
 package com.swaglabs.pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import com.saucelabs.utils.ConfigurationReader;
 import com.saucelabs.utils.ElementUtil;
 
 public class LoginPage {
@@ -28,16 +24,16 @@ public class LoginPage {
 	}
 
 	// Actions
-	public ProductsPage doLogin(String username, String password) {
+	public InventoryPage doLogin(String username, String password) {
 		eleUtil.waitForElementVisible(5, usernameField).sendKeys(username);
 		eleUtil.waitForElementVisible(5, passwordField).sendKeys(password);
 		eleUtil.waitForElementVisible(5, loginButton).click();
 
-		return new ProductsPage(driver);
+		return new InventoryPage(driver);
 	}
 
 	public String getLoginPageURL() {
-		String loginPageURL = eleUtil.waitForURLAndFetch(ConfigurationReader.getProperty("LoginPageURL"),5);
+		String loginPageURL = eleUtil.fetchCurrentPageURL();
 		return loginPageURL;
 	}
 

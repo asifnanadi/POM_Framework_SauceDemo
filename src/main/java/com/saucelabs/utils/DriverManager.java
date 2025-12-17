@@ -13,14 +13,17 @@ public class DriverManager {
 			if (browserName.trim().equalsIgnoreCase("chrome")) {
 				driver = new ChromeDriver();
 			} else {
-				System.out.println("Invalid Browser");
+				throw new RuntimeException("Invalid Browser");
+//				System.out.println("Invalid Browser");
 			}
 
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
-			driver.get(ConfigurationReader.getProperty("LoginPageURL"));// Fetch Login Page URL from properties file.
 
-			
+			// 1. DriverManager class should only manage driver
+			// 2. Navigation belongs to BaseTest class, not DriverManager class.
+			// 3. Hence, commenting below line of code
+			// driver.get(ConfigurationReader.getProperty("LoginPageURL"));
 
 		}
 		return driver;

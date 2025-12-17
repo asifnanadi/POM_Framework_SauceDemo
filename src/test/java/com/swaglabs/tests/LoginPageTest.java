@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 import com.saucelabs.utils.ConfigurationReader;
 import com.swaglabs.base.BaseTest;
-import com.swaglabs.pages.LoginPage;
 
 public class LoginPageTest extends BaseTest {
 
@@ -16,10 +15,11 @@ public class LoginPageTest extends BaseTest {
 
 	}
 	
-	@Test()
-	public void loginTest() {
-		productPage=loginPage.doLogin(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
-		Assert.assertEquals(productPage.getProductsURL(), ConfigurationReader.getProperty("productsPageURL"));
+	@Test(priority = 1)
+	public void loginPageTest() {
+		inventoryPage=loginPage.doLogin(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
+		Assert.assertEquals(inventoryPage.getProductsPageURL(), ConfigurationReader.getProperty("inventoryPageURL"));
+		
 	}
 
 }

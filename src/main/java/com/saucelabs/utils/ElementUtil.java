@@ -43,13 +43,12 @@ public class ElementUtil {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
-
-	public String waitForURLAndFetch(String URLValue, int timeOut) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
-		wait.until(ExpectedConditions.urlToBe(URLValue));
+	
+	public String fetchCurrentPageURL() {
 		return driver.getCurrentUrl();
 	}
-
+	
+	
 	// Click method with explicit wait
 	public void clickElement(By locator, int timeout) {
 		waitForElementClickable(locator, timeout).click();
