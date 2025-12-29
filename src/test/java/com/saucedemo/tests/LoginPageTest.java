@@ -1,10 +1,10 @@
-package com.swaglabs.tests;
+package com.saucedemo.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.saucelabs.utils.ConfigurationReader;
-import com.swaglabs.base.BaseTest;
+import com.saucedemo.base.BaseTest;
+import com.saucedemo.utils.ConfigurationReader;
 
 public class LoginPageTest extends BaseTest {
 

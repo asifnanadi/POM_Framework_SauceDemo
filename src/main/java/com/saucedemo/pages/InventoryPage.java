@@ -1,20 +1,20 @@
-package com.swaglabs.pages;
+package com.saucedemo.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.saucelabs.utils.ConfigurationReader;
-import com.saucelabs.utils.ElementUtil;
+import com.saucedemo.base.BasePage;
+import com.saucedemo.utils.ConfigurationReader;
+import com.saucedemo.utils.ElementUtil;
 
-public class InventoryPage {
+public class InventoryPage extends BasePage {
 
 	private WebDriver driver;
-	private ElementUtil eleUtil;
+//	private ElementUtil eleUtil;
 
 	// constructor
 	public InventoryPage(WebDriver driver) {
-		this.driver = driver;
-		eleUtil = new ElementUtil(driver);
+		super(driver); //initializes driver and ElementUtil
 	}
 
 	// locators

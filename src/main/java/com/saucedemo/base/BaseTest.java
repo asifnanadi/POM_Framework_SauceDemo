@@ -1,14 +1,15 @@
-package com.swaglabs.base;
+package com.saucedemo.base;
 
 import org.openqa.selenium.WebDriver;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import com.saucelabs.utils.ConfigurationReader;
-import com.saucelabs.utils.DriverManager;
-import com.swaglabs.pages.CartPage;
-import com.swaglabs.pages.InventoryPage;
-import com.swaglabs.pages.LoginPage;
+
+import com.saucedemo.pages.CartPage;
+import com.saucedemo.pages.InventoryPage;
+import com.saucedemo.pages.LoginPage;
+import com.saucedemo.utils.ConfigurationReader;
+import com.saucedemo.utils.DriverManager;
 
 public class BaseTest {
 

@@ -1,4 +1,4 @@
-package com.saucelabs.utils;
+package com.saucedemo.utils;
 
 import java.io.File;
 import java.time.Duration;
